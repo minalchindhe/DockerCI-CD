@@ -31,7 +31,8 @@ pipeline {
             steps 
 			{
                 sh "docker run --name demo123 -itd samplewebapp:latest"
-				sh "docker run --name test123 -P 32772 -it samplewebapp:latest"
+				sh "docker run --name test123 -p 32772:8080 -it samplewebapp:latest"
+				sh "docker run -d -p 8003:8080 nikhilnidhi/samplewebapp"
 				
  
             }
