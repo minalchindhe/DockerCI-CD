@@ -30,8 +30,7 @@ pipeline {
              
             steps 
 			{
-                sh "docker run --name demo123 -itd samplewebapp:latest"
-		sh "docker run -d -p 8003:8080 minal123/samplewebapp"		
+                sh "docker run --name demo123 -itd samplewebapp:latest"	
  
             }
         }
