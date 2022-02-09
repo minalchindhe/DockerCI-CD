@@ -1,10 +1,4 @@
 pipeline {
-    agent any
-	
-	  tools
-    {
-       maven "maven"
-    }
  stages {
       stage('checkout') {
            steps {
@@ -25,7 +19,7 @@ pipeline {
            steps {
               
                 sh 'docker build -t samplewebapp:latest .' 
-                sh 'docker tag samplewebapp nikhilnidhi/samplewebapp:latest'
+                sh 'docker tag samplewebapp minal/samplewebapp:latest'
                 //sh 'docker tag samplewebapp minal/samplewebapp:$BUILD_NUMBER'
                
           }
