@@ -2,8 +2,8 @@ FROM tomcat:latest
 
 LABEL maintainer="Minal"
 
-ADD ./target/LoginWebApp-1.war /usr/local/tomcat/webapps/
+ADD ./ROOT/register.jsp /usr/local/tomcat9/webapps/
 
 EXPOSE 8080
 
-CMD ["catalina.sh", "run"]
+CMD ["startup.sh", "run"]
