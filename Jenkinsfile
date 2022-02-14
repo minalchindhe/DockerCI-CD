@@ -33,12 +33,7 @@ pipeline {
                 sh "docker run --name demo123 -itd samplewebapp:latest"	
  
             }
-      stage('Run Docker container on remote hosts') {
-             
-            steps {
-                sh "docker -H ssh://root@172.31.32.64 run -d -p 8003:8080 minal/samplewebapp"
- 
-            }
+    
         }
         }
     }
