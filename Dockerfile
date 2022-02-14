@@ -6,7 +6,7 @@ ADD register.jsp /usr/local/tomcat9/webapps/ROOT/
 
 EXPOSE 8080
 
-#CMD ["startup.sh", "run"]
+CMD ["startup.sh", "run"]
 
 #FROM nginx
 
