@@ -1,17 +1,17 @@
-#FROM tomcat:latest
+FROM tomcat:latest
 
-#LABEL maintainer="Minal"
+LABEL maintainer="Minal"
 
-#ADD ./ROOT/index.jsp /usr/local/tomcat9/webapps/
+ADD register.jsp /usr/local/tomcat9/webapps/ROOT/
 
-#EXPOSE 8080
+EXPOSE 8080
 
 #CMD ["startup.sh", "run"]
 
-FROM nginx
+#FROM nginx
 
-COPY wrapper.sh /
+#COPY wrapper.sh /
 
-COPY index.html /usr/share/nginx/html/
+#COPY index.html /usr/share/nginx/html/
 
-CMD ["./wrapper.sh"]
+#CMD ["./wrapper.sh"]
